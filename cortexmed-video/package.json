@@ -1,0 +1,22 @@
+{
+  "name": "cortexmed-video",
+  "version": "1.0.0",
+  "scripts": {
+    "render": "remotion render src/index.ts CortexMedVideo out/cortexmed_video_raw.mp4 --muted --overwrite && ffmpeg -y -i out/cortexmed_video_raw.mp4 -i out/master_soundtrack_90s.aac -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 -shortest out/cortexmed_product_demo_90s.mp4",
+    "preview": "remotion preview src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.545",
+    "@remotion/cli": "^4.0.545",
+    "@remotion/compositor-win32-x64-msvc": "^4.0.545",
+    "@remotion/studio": "^4.0.545",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.545"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}

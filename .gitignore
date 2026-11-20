@@ -1,0 +1,28 @@
+# Environment and credentials (STRICTLY NEVER COMMIT)
+.env
+.env.*
+*.env
+.env.local
+!.env.example
+
+# Dependencies & Build artifacts
+node_modules/
+*/node_modules/
+.next/
+*/.next/
+dist/
+build/
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+
+# Archives & Temporary Raw Audio
+*.zip
+*.wav
+audio_clips/
+cortexmed-video/out/*.wav
+*.tmp
+*.log
